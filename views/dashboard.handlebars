@@ -1,0 +1,41 @@
+<div class="container mx-auto p-6">
+  <div class="flex items-center my-6">
+    <h2 class="text-3xl">Welcome, {{user.name}}!</h2>
+  </div>
+
+  <div class="my-6">
+    <h3 class="text-2xl">Create a New Post:</h3>
+
+    <form class="form new-post-form bg-white p-6 shadow-lg">
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="post-name">Post Title:</label>
+        <input class="border border-gray-400 p-2 w-full" type="text" id="post-name" name="post-name" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="post-desc">Body:</label>
+        <textarea class="border border-gray-400 p-2 w-full h-32" id="post-desc" name="post-desc"></textarea>
+      </div>
+      <div class="text-center">
+        <button class="bg-blue-500 text-white p-2 hover:bg-blue-600" type="submit">Create</button>
+      </div>
+    </form>
+  </div>
+
+{{#if posts}}
+  <h3 class="text-2xl">Current Posts:</h3>
+{{#each posts as |post|}}
+  <div class="my-4">
+    <div class="flex justify-between bg-white p-4 shadow-lg">
+      <div>
+        <h4 class="text-lg"><a href="/post/{{post.id}}" class="text-blue-500"> {{post.title}}</a></h4>
+      </div>
+      <div>
+        <button data-id="{{post.id}}" class="bg-red-500 text-white p-2 hover:bg-red-600">DELETE</button>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+{{/if}}
+</div>
+
+<script src="./js/dashboard.js"></script>

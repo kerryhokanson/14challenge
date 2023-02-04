@@ -1,0 +1,22 @@
+[
+    {
+      "body": "yes but at the same time no",
+      "post_id": 1,
+      "user_id":2
+    },
+    {
+      "body": "buckle up, it's only gonna get faster",
+      "post_id": 1,
+      "user_id":3
+    },
+    {
+      "body": "Oh, I just realized that's what RISC means",
+      "post_id": 2,
+      "user_id": 1
+    },
+    {
+      "body": "based on the accelerating rate of technological change, I predict that will become feasible sometime around the middle of 2029",
+      "post_id": 3,
+      "user_id": 3
+    }
+  ]

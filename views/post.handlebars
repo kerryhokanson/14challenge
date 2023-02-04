@@ -1,0 +1,23 @@
+<div class="p-4">
+  <h2 class="text-2xl font-bold">{{post.title}}</h2>
+  <p class="mt-2">{{post.body}}</p>
+  <p class="text-gray-500">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+</div>
+{{#if post.comments}}
+
+<div class="p-4">
+  <h3 class="text-xl font-bold">Comments</h3>
+  <section class="mt-2">
+    {{#each post.comments}}
+    <div class="p-2 border border-gray-400">
+      <p class="mt-2">{{this.body}}</p>
+    </div>
+    {{/each}}
+  </section>
+</div>
+{{/if}}
+<div class="p-4">
+  <textarea name="comment" id="comment" cols="30" rows="10" class="p-2 border border-gray-400 w-full"></textarea>
+  <button id = 'add-comment-btn' class="mt-2 bg-blue-500 text-white p-2 hover:bg-blue-600 rounded">add comment</button>
+</div>
+<script src="./js/post.js"></script>
